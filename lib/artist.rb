@@ -25,11 +25,12 @@ class Artist
     self.all.find {|artist| artist.name == name} || self.create(name)
     #this is a class method. we call find or create by name on the artist class itself
     #the self within the class method refers to the class itself. its the same as saying
-    #Artist.all.find. 
+    #Artist.all.find.
   end
 
-  def self.create(name)
+  def self.create(name) #class method
     song = self.new(name)
+    #here self refers to Artist. same as Artist.new
     song.tap {|x| x.save}
   end
 

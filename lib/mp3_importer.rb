@@ -22,10 +22,8 @@ class MP3Importer
       end
 
      def import
-       files.each do |file_name_string|
-          Song.new_by_filename(file_name_string)
-        end
-      end
+       files.each { |file_name_string| Song.new_by_filename(file_name_string)}
+     end
 
        #file_names = Dir.glob("#{path}/*.mp3").split(" - ")[]
 end

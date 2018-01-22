@@ -21,6 +21,9 @@ class MP3Importer
        file_names_correct
       end
 
+      #if we complete the each block with {} on a single line, then it implicitly returns that manipulated data. 
+      
+
      def import
        #an instance method to call a method on each file in the import instance
        files.each { |file_name_string| Song.new_by_filename(file_name_string)}
@@ -29,5 +32,5 @@ class MP3Importer
 
      end
 
-       #file_names = Dir.glob("#{path}/*.mp3").split(" - ")[]
+       
 end

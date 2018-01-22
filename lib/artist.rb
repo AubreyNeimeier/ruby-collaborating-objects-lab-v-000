@@ -1,3 +1,6 @@
+generally speaking instance methods operate on a specific instance that already exists
+while class methods either construct new instances (constructors), operate on the class as a whole (operators), or search the entire class (finders)
+
 class Artist
   attr_accessor :name
   @@all = []

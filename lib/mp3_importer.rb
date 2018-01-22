@@ -22,7 +22,9 @@ class MP3Importer
       end
 
      def import
+       #an instance method to call a method on each file in the import instance
        files.each { |file_name_string| Song.new_by_filename(file_name_string)}
+        #the new by filename is a class method because
      end
 
        #file_names = Dir.glob("#{path}/*.mp3").split(" - ")[]

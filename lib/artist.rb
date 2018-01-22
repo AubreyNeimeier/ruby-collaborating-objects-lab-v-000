@@ -30,11 +30,6 @@ class Artist
     song.tap {|x| x.save}
   end
 
-#we need to add logic such that
-  #if artist already exists and !(songs includes the artists song we are adding)
-    #add_song to @songs
-  # else
-
   def self.all
     @@all
   end

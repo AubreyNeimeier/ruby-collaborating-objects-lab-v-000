@@ -23,6 +23,8 @@ class Artist
   def self.find_or_create_by_name(name)
     #self.all.find {|artist| artist.name == name} || Artist.new(name).tap { |art| art.save }
     self.all.find {|artist| artist.name == name} || self.create(name)
+    #this is a class method. we call find or create by name on the artist class itself
+    #the self within the method refers to the instance 
   end
 
   def self.create(name)

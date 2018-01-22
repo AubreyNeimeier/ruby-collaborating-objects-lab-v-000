@@ -37,6 +37,8 @@ class Artist
   def self.create(name) #class method
     song = self.new(name)
     #here self refers to Artist. same as Artist.new
+    #the temporary variable is song. we can refernce this isntance in the future with its other attributes
+    #even if we don't have the instance saved into a variable name like hot_line_bling
     song.tap {|x| x.save}
   end
 

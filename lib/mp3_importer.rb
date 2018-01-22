@@ -21,8 +21,8 @@ class MP3Importer
        file_names_correct
       end
 
-      #if we complete the each block with {} on a single line, then it implicitly returns that manipulated data. 
-      
+      #if we complete the each block with {} on a single line, then it implicitly returns that manipulated data.
+      #@files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
 
      def import
        #an instance method to call a method on each file in the import instance
@@ -32,5 +32,5 @@ class MP3Importer
 
      end
 
-       
+
 end

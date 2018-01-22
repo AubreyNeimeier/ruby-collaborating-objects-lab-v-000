@@ -27,7 +27,7 @@ class Artist
 
   def self.create(name)
     song = self.new(name)
-    song.artist.save
+    song.tap {|x| x.save}
   end
 
 #we need to add logic such that
